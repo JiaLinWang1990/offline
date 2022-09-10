@@ -55,8 +55,8 @@
 		  $.ajax({
 			  type:'GET',
 			  async:true,
-			//   url:'http://192.168.1.4:5000/rest/v1/sensor_list/',
-			  url:'/api',
+			  url:'http://127.0.0.1:5000/rest/v1/sensor_list/',
+			 // url:'/api',
 			  success:function(res){
 				  console.log(res,'res')
                   res.length && res.map(item=>{
