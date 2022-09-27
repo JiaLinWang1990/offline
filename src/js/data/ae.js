@@ -8,8 +8,8 @@ export var ae = {
     "series": [
       {
         "name": "最大值",
-        "min": 0,
-        "max": 20,
+        "min": -10,
+        "max": 75,
         "dataList": [
           { "name": "测量值", "value": 7.5, "color": "jet" }
         ]
@@ -17,23 +17,23 @@ export var ae = {
       {
         "name": "有效值",
         "min": -10,
-        "max": 30,
+        "max": 75,
         "dataList": [
           { "name": "测量值", "value": 10, "color": "jet" }
         ]
       },
       {
         "name": "50Hz分量",
-        "min": 0,
-        "max": 2,
+        "min": -10,
+        "max": 75,
         "dataList": [
           { "name": "测量值", "value": 0.5, "color": "jet" }
         ]
       },
       {
         "name": "100Hz分量",
-        "min": 0,
-        "max": 2,
+        "min": -10,
+        "max": 75,
         "dataList": [
           { "name": "测量值", "value": 1.5, "color": "jet" }
         ]
