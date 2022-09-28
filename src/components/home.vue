@@ -59,12 +59,12 @@
 			 // url:'/api',
 			  success:function(res){
 				  console.log(res,'res')
-                  //res.length && res.map(item=>{
-                   // if(item.data_type.toUpperCase().indexOf('TEV')>-1){
-                    //    item.data_type = 'AE'
-                    //}
-                    //return item;
-                  //})
+                  res.length && res.map(item=>{
+                   if(item.data_type.toUpperCase().indexOf('TEV')>-1){
+                       item.data_type = 'AE'
+                    }
+                    return item;
+                  })
 					This.dataList = res
 			  },
 			  error:function(){
@@ -76,7 +76,7 @@
 				 	  },
 				 	  {
 				 		  test_location_name:'开关柜UFH测点B',
-				 		  data_type:'AE/TEV',
+				 		  data_type:'AE',
 				 		  acquisition_time:'2021-06-06 16:00:00'
 				 	  }
 				   ]
@@ -84,9 +84,9 @@
 		  })
 	  },
 	  showDetails(item) {
-            //if(item.data_type.toUpperCase().indexOf('TEV')>-1){
-            //    item.data_type = 'AE'
-            //}
+            if(item.data_type.toUpperCase().indexOf('TEV')>-1){
+               item.data_type = 'AE'
+            }
 			this.current = item;
 			console.log(pdcharts.chartType)
 			let type, data;
@@ -100,7 +100,7 @@
 			  for (var i = 0; i < _data.length; i++) {
 				temp[i][2] = _data[i];
 			  }
-			} else if (item.data_type == "AE/TEV") {
+			} else if (item.data_type == "AE") {
 			  type = chartType.ae;
 			  data = ae.chartBody;
 			  let arr = ['maxvalue', 'rmsvalue', 'harmonic1', 'harmonic2'];
