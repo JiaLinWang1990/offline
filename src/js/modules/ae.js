@@ -39,7 +39,7 @@ class Amplitude extends Chart {
             grid.push({
                 top: (22 * index + 20) + '%',
                 left: opts.fontSize * 2,
-                right: opts.fontSize * 4,
+                right: opts.fontSize * 6,
                 height: '10%'
             });
             //X轴
